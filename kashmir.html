@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kashmir Trip Booking</title>
+  <link rel="stylesheet" href="kashmir.css" />
+</head>
+<body>
+
+  <!-- First Row: Full-width Image -->
+  <div class="trip-image">
+    <img src="kashmir.jpg" alt="Kashmir Trip" height="100px" width="100px" >
+        
+    </div>
+  
+
+  <!-- Second Row: Schedule and Booking Section -->
+  <div class="content-row">
+    
+    <!-- Schedule -->
+    <section class="schedule">
+      <h2>Schedule</h2>
+            <div class="schedule-item">
+                    <span class="da y">DAY 1</span>
+                    <h3>Departure from Ahmedabad</h3>
+                    <p>Overnight Journey towards Jammu Tawi</p>
+                </div>
+                <div class="schedule-item">
+                    <span class="day">DAY 2</span>
+                    <h3>Arrival at Jammu & Night Stay</h3>
+                    <p>Evening Check-in at Jammu Hotel</p>
+                </div>
+                <div class="schedule-item">
+                    <span class="day">DAY 3</span>
+                    <h3>Day Journey towards Srinagar & Night halt</h3>
+                    <p>Whole day journey towards Srinagar</p>
+                </div>
+                <div class="schedule-item">
+                    <span class="day">DAY 4</span>
+                    <h3>Day for Srinagar Exploration</h3>
+                    <p>Shikara Ride & Sightseeing </p>
+                </div>
+                <div class="schedule-item">
+                    <span class="day">DAY 5</span>
+                    <h3>Travel to Naranag & Acclimatisation Trek</h3>
+                    <p>Night stay at Naranag </p>
+                </div>
+                <div class="schedule-item">
+                    <span class="day">DAY 6</span>
+                    <h3>Trek to Snow Point & Back!</h3>
+                    <p>Drive Back to Srinagar in Evening </p>
+                </div>
+                <div class="schedule-item">
+                    <span class="day">DAY 7</span>
+                    <h3>Day for Gulmarg Exploration</h3>
+                    <p>Sightseeing & Activities</p>
+                </div>
+                <div class="schedule-item">
+                    <span class="day">DAY 8</span>
+                    <h3>Journey Back to Jammu & Stay</h3>
+                    <p>Return Road Journey towards Jammu </p>
+                </div>
+                <div class="schedule-item">
+                    <span class="day">DAY 9</span>
+                    <h3>Return Train Journey Towards Ahmedabad</h3>
+                    <p>Overnight Train Journey </p>
+                </div>
+      <!-- Continue with other days as before... -->
+      <div class="schedule-item">
+        <span class="day">DAY 10</span>
+        <h3>Arrival at Ahmedabad & Disperse</h3>
+        <p>Back to Home loaded with memories and stories.</p>
+      </div>
+    </section>
+
+    <!-- Booking Section -->
+    <div class="booking-details">
+      <h2>Kashmir Tour</h2>
+      <p><b>📍 Location:</b> Srinagar</p>
+      <p><b>💰 Price:</b> ₹13000 per person</p>
+      <p><b>🚗 Distance:</b> 1500 km</p>
+      <p><b>👥 Group Size:</b> 10 people</p>
+
+      <div class="booking-box">
+        <h3>Booking Details</h3>
+        <input type="text" id="name" placeholder="Full Name">
+        <input type="tel" id="phone" placeholder="Phone">
+        <input type="date" id="date">
+        <input type="number" id="guests" value="1" min="1" onchange="updateTotal()">
+        
+        <div class="cost-details">
+          <p>₹13000 x <span id="guestCount">1</span> person</p>
+          <p>Service Charge: ₹200</p>
+          <p><b>Total: ₹<span id="totalCost">13200</span></b></p>
+        </div>
+
+        <a class="book-btn" href="booknow.html">Book Now</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

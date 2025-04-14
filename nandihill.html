@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nandi Hills Trip Booking</title>
+  <link rel="stylesheet" href="nandihill.css" />
+</head>
+<body>
+  <div class="trip-image">
+    <img src="nandihill.png" alt="Nandi Hills Trip" height="100px" width="100px">
+  </div>
+
+  <div class="content-row">
+    <section class="schedule">
+      <h2>Schedule</h2>
+      <div class="schedule-item">
+        <span class="day">DAY 1</span>
+        <h3>Departure from Ahmedabad</h3>
+        <p>Flight/train journey to Bengaluru, drive to Nandi Hills</p>
+      </div>
+      <div class="schedule-item">
+        <span class="day">DAY 2</span>
+        <h3>Explore Nandi Hills</h3>
+        <p>Visit Tipu’s Drop, Nandi Fort, Sunrise Point</p>
+      </div>
+      <div class="schedule-item">
+        <span class="day">DAY 3</span>
+        <h3>Trekking & Nature Trail</h3>
+        <p>Guided trek through nearby forest trails</p>
+      </div>
+      <div class="schedule-item">
+        <span class="day">DAY 4</span>
+        <h3>Local Exploration</h3>
+        <p>Explore Bhoga Nandeeshwara Temple and Wine Yard</p>
+      </div>
+      <div class="schedule-item">
+        <span class="day">DAY 5</span>
+        <h3>Return to Ahmedabad</h3>
+        <p>Drive back to Bengaluru & flight/train back</p>
+      </div>
+    </section>
+
+    <div class="booking-details">
+      <h2>Nandi Hills Tour</h2>
+      <p><b>📍 Location:</b> Nandi Hills, Karnataka</p>
+      <p><b>💰 Price:</b> ₹12000 per person</p>
+      <p><b>🚗 Distance:</b> 1400 km (approx)</p>
+      <p><b>👥 Group Size:</b> 8 people</p>
+
+      <div class="booking-box">
+        <h3>Booking Details</h3>
+        <input type="text" id="name" placeholder="Full Name">
+        <input type="tel" id="phone" placeholder="Phone">
+        <input type="date" id="date">
+        <input type="number" id="guests" value="1" min="1" onchange="updateTotal()">
+        
+        <div class="cost-details">
+          <p>₹12000 x <span id="guestCount">1</span> person</p>
+          <p>Service Charge: ₹200</p>
+          <p><b>Total: ₹<span id="totalCost">12200</span></b></p>
+        </div>
+
+        <a class="book-btn" href="booknow.html">Book Now</a>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
