@@ -1,11 +1,35 @@
+const prices = { Bus: 11000, Train: 13000, Flight: 18000 };
+const vehicleSelect = document.getElementById("vehicle");
+const guestInput = document.getElementById("guests");
+const guestCountSpan = document.getElementById("guestCount");
+const totalCostSpan = document.getElementById("totalCost");
+
 function updateTotal() {
-    let guestCount = parseInt(document.getElementById('guests').value); // Get number of guests
-    let pricePerGuest =14000; // Fixed price per person
-    let serviceChargePerGuest = 200; // Service charge per person
+  const guests = parseInt(guestInput.value) || 1;
+  const vehicle = vehicleSelect.value;
+  const serviceCharge = 200;
 
-    let totalCost = (guestCount * pricePerGuest) + (guestCount * serviceChargePerGuest); // Calculate total
-    let serviceChargeTotal = guestCount * serviceChargePerGuest; // Total service charge
+  if (vehicle && prices[vehicle]) {
+    const price = prices[vehicle];
+    const total = price * guests + serviceCharge;
+    guestCountSpan.innerText = guests;
+    totalCostSpan.innerText = total;
+    document.querySelector(".cost-details p").innerHTML = `₹${price} x <span id="guestCount">${guests}</span> person`;
+  }
+}
 
-    document.getElementById('guestCount').innerText = guestCount; // Update guest count
-    document.getElementById('totalCost').innerText = totalCost; // Update total price
+vehicleSelect.addEventListener("change", updateTotal);
+guestInput.addEventListener("input", updateTotal);
+
+function showQR() {
+  if (!vehicleSelect.value) {
+    alert("Please select a vehicle type!");
+    return;
+  }
+  document.getElementById("qrPopup").style.display = "flex";
+}
+
+function submitForm() {
+  document.getElementById("qrPopup").style.display = "none";
+  document.getElementById("bookingForm").submit();
 }
